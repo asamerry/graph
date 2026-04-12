@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph"
+version = "0.0.1"
+description = "My graph/network theory package"
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+	"plotly"
+]
+
+[tool.setup.packages.find]
+where = ["."]
