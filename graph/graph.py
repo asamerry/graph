@@ -8,6 +8,9 @@ class Graph:
     def edges(self): return self._edges
 
     def add_vertex(self, label: str, x: float, y: float, size: float, color: str): 
+        if label in self._vertices.keys():
+            print(f"Vertex with label \"{label}\" already exists.")
+            exit(1)
         self._vertices[label] = {"x": x, "y": y, "size": size, "color": color}
     
     def add_edge(self, v1_label: str, v2_label: str, width: float=1.0): 
